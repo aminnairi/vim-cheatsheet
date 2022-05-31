@@ -16,6 +16,7 @@ Command | Description
 ### Normal Mode
 
 Keybind | Description
+---|---
 `ESC` | Quit the current mode to go back into `NORMAL` mode
 `\`a` | Go to the mark under the `a` register
 `qa` | Begin a macro and register the keystrokes to the letter `a`
