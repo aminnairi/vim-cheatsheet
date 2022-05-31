@@ -53,13 +53,18 @@ Keybind | Description
 `Fa` | Move the cursor just under the previous occurrence of the `a` character
 `ga` | Display the ASCII, octal and hexadecimal value of the character under the cursor
 `gd` | Go to local definition of the variable under the cursor
-`gd` | Go to local definition of the variable under the cursor
+`gD` | Go to global definition of the variable under the cursor
 `ge` | Move the cursor to the beginning of the previous word
+`gE` | Move the cursor to the beginning of the previous whitespace separated word
 `gf` | Open the file under the cursor for editin in the current buffer
+`10gF` | Open the file under the cursor for editin in the current buffer and go to the `10`th line
 `gg` | Move the cursor to the top of the buffer
 `gi` | Move the cursor to the location of where the previous insertion has ended
+`10gI` | Move the cursor before the first non-whitespace character of the line under the cursor, go into `INSERT` mode and repeat the insertion `10`th time after going back to `NORMAL` mode
 `gn` | Move the cursor to the next search and go into `VISUAL` mode
+`gN` | Move the cursor to the previous search and go into `VISUAL` mode
 `gt` | Move to the next tab
+`gT` | Move to the previous tab
 `guiw` | Lowercase a word
 `gUiw` | Uppercase a word
 `gw` | Format the selected lines and go back to the original position
