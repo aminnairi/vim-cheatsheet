@@ -1,6 +1,8 @@
 # vim-cheatsheet
 
-## Commands
+## Keybindings
+
+## Command Mode
 
 Command | Description
 ---|---
@@ -11,14 +13,11 @@ Command | Description
 `:wq` | Write the current edited buffer and quit VIM
 `:wqa` | Write all edited buffers and quit VIM
 
-## Keybindings
-
 ### Normal Mode
 
 Keybind | Description
 ---|---
 `ESC` | Quit the current mode to go back into `NORMAL` mode
-`\`a` | Go to the mark under the `a` register
 `qa` | Begin a macro and register the keystrokes to the letter `a`
 `q` | While in a macro, ends a macro
 `w` | Go to the beginning of the next word
@@ -45,5 +44,26 @@ Keybind | Description
 `b` | Move the cursor to the beginning of the previous word
 `n` | Go to the previous occurrence of a search
 `ma` | Create a mark under the cursor and assign it to the `a` character
-
-`a` | Move cursor after the letter under the cursor and enter `INSERT` mode
+`@a` | Execute the macro registered in the `a` letter
+`#` | Search the previous occurrence of the word under the cursor
+`$` | Go to the end of the line under the cursor
+`%` | Go to the matching character `(`, `)`, `[`, `]`, `{`, or `}`
+`^` | Go to the first non-blank character of the line under the cursor
+`#` | Search the next occurrence of the word under the cursor
+`(` Go to the beginning of the paragraph
+`)` Go to the beginning of the paragraph
+`_` | Go to the first non-blank character of the line under the cursor
+`[[` | Go to the beginning of the file
+`]]` | Go to the end of the file
+`{` | Go to the line before the beginning of a paragraph
+`}` | Go to the line after the end of a paragraph
+`;` | Go to the next occurrence a search after a `f`, `F`, `t` or a `T`
+`'a` | Go to the mark under the `a` letter
+`,` | Go to the previous occurrence a search after a `f`, `F`, `t` or a `T`
+`.` | Repeat the previous action
+`/` | Search a word from the cursor until the end of the file
+`?` | Search a word from the cursor until the beginning of the file
+`<` | Indent a line backward
+`>` | Indent a line forward
+`:` | enter in `COMMAND` mode
+`~` | Toggle the case (upper or lower) of the character under the cursor
