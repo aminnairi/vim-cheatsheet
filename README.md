@@ -51,8 +51,20 @@ Keybind | Description
 `D` | Delete all characters from the cursor until the end of the line
 `fa` | Move the cursor just under the next occurrence of the `a` character
 `Fa` | Move the cursor just under the previous occurrence of the `a` character
+`ga` | Display the ASCII, octal and hexadecimal value of the character under the cursor
+`gd` | Go to local definition of the variable under the cursor
+`gd` | Go to local definition of the variable under the cursor
+`ge` | Move the cursor to the beginning of the previous word
+`gf` | Open the file under the cursor for editin in the current buffer
+`gg` | Move the cursor to the top of the buffer
+`gi` | Move the cursor to the location of where the previous insertion has ended
+`gn` | Move the cursor to the next search and go into `VISUAL` mode
+`gt` | Move to the next tab
+`guiw` | Lowercase a word
+`gUiw` | Uppercase a word
+`gw` | Format the selected lines and go back to the original position
+`gv` | Go into the previous lines selected in `VISUAL` mode 
 `G` | Go to the end of the buffer
-`gg` | Go to the top of the buffer
 `h` | Move the cursor one character before the current one
 `H` | Move the cursor under the first line of the screen
 `j` | Move the cursor one line after the current one
