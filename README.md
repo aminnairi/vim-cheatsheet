@@ -12,6 +12,11 @@ Command | Description
 `:wa` | Write all currently edited buffers
 `:wq` | Write the current edited buffer and quit VIM
 `:wqa` | Write all edited buffers and quit VIM
+`:%s/cat/dog/g` | Replace all occurrences of the word `cat` by the word `dog` in the entire buffer
+`:%s/cat/dog/gc` | Replace with confirmation all occurrences of the word `cat` by the word `dog` in the entire buffer
+`:find Main.elm` | Find the file `Main.elm` in the current working directory
+`:edit Main.elm` | Open the `Main.elm` file for editing in the current buffer
+`:buffer index.html` | Switches to the `index.html` file for editing in the current buffer
 
 ### Normal Mode
 
@@ -31,7 +36,7 @@ Keybind | Description
 `yy` | Copy the line
 `Y` | Copy the line
 `u` | Undo the previous action
-`U` | Redo the previously undone action
+`U` | Undo latest change on the line
 `i` | Go to `INSERT` mode
 `I` | Move the cursor to the first non-whitespace character of the line under the cursor and go into `INSERT` mode
 `o` | Append a new line after the cursor and go into `INSERT` mode
@@ -43,14 +48,11 @@ Keybind | Description
 `s` | Remove the character under the cursor and go into `INSERT` mode
 `S` | Delete all characters of the line under the cursor and go into `INSERT` mode
 `dd` | Delete the line under the cursor
-`dta` | Delete all character from the cursor until the character before the next `a` character
-`dTa` | Delete all character from the cursor until the character before the previous `a` character
-`dfa` | Delete all character from the cursor until the next `a` character
-`dFa` | Delete all character from the cursor until the previous `a` character
-`diw` | Delete all characters of a word independently of the position of cursor in the word
-`D` | Delete all character from the cursor until the end of the line
+`D` | Delete all characters from the cursor until the end of the line
 `fa` | Move the cursor just under the next occurrence of the `a` character
 `Fa` | Move the cursor just under the previous occurrence of the `a` character
+`G` | Go to the end of the buffer
+`gg` | Go to the top of the buffer
 `h` | Move the cursor one character before the current one
 `H` | Move the cursor under the first line of the screen
 `j` | Move the cursor one line after the current one
@@ -60,15 +62,12 @@ Keybind | Description
 `l` | Move the cursor one character after the current one
 `L` | Move the cursor under the last line of the screen
 `zz` | Move the screen so that the cursor gets in the middle of the screen
+`zt` | Move the screen so that the cursor gets in the top of the screen
+`zb` | Move the screen so that the cursor gets in the bottom of the screen
 `ZZ` | Write all buffers and close VM
 `x` | Delete the character under the cursor
 `X` | Delete the character before the cursor
 `cc` | Delete all characters in the line under the cursor and go into `INSERT` mode
-`cta` | Delete all character from the cursor until the character before the next `a` character and go into `INSERT` mode
-`cTa` | Delete all character from the cursor until the character before the previous `a` character and go into `INSERT` mode
-`cfa` | Delete all character from the cursor until the next `a` character and go into `INSERT` mode
-`cFa` | Delete all character from the cursor until the previous `a` character and go into `INSERT` mode
-`ciw` | Delete all characters of a word independently of the position of cursor in the word and go into `INSERT` mode
 `C` | Delete all characters from the cursor until the end of the line and go into `INSERT` mode
 `v` | Go into `VISUAL` mode
 `V` | Go into `VISUAL LINE` mode
@@ -80,10 +79,11 @@ Keybind | Description
 `M` | Move the cursor to the middle of the screen
 `@a` | Execute the macro registered in the `a` letter
 `#` | Search the previous occurrence of the word under the cursor
-`$` | Go to the end of the line under the cursor
-`%` | Go to the matching character `(`, `)`, `[`, `]`, `{`, or `}`
-`^` | Go to the first non-blank character of the line under the cursor
-`#` | Search the next occurrence of the word under the cursor
+`$` | Move the cursor to the end of the line
+`%` | Move the cursor to the matching character `(`, `)`, `[`, `]`, `{`, or `}`
+`^` | Move the cursor to the first non-blank character of the line
+`#` | Move the cursor to the previous occurrence of the word under the cursor
+`*` | Move the cursor to the next occurrence of the word under the cursor
 `(` Go to the beginning of the paragraph
 `)` Go to the beginning of the paragraph
 `_` | Go to the first non-blank character of the line under the cursor
@@ -101,3 +101,15 @@ Keybind | Description
 `>` | Indent a line forward
 `:` | enter in `COMMAND` mode
 `~` | Toggle the case (upper or lower) of the character under the cursor
+`==` | Indent the line under the cursor
+`CONTROL-q` | Go into `VISUAL BLOCK` mode
+`CONTROL-x` | Decrement the the number under the cursor by 1
+`CONTROL-e` | Scroll up one line
+`CONTROL-r` | Redo latest change
+`CONTROL-y` | Scroll down one line
+`CONTROL-u` | Scroll up one half-screen
+`CONTROL-i` | Go to the next cursor jump
+`CONTROL-o` | Go to the previous cursor jump
+`CONTROL-d` | Scroll down one half-screen
+`CONTROL-a` | Increment the the number under the cursor by 1
+`CONTROL-v` | Go into `VISUAL BLOCK` mode
